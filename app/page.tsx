@@ -1,4 +1,4 @@
-import { Button } from "@marketplace/design-system/components/atoms/Button";
+import { Button } from "@marketplace/design-system";
 
 export default function Home() {
   return (
