@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardAction,
 } from "./Card";
-import { ShadcnButton } from "@/components/atoms/ShadcnButton";
+import { ShadcnButton } from "../../atoms/ShadcnButton";
 
 const meta: Meta<typeof Card> = {
   title: "Molecules/Card",
