@@ -16,10 +16,7 @@ function ShadcnButton({
   size = "default",
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) {
+}: ShadcnButtonProps) {
   const Comp = asChild ? Slot.Root : "button";
 
   return (
