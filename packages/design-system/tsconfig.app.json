@@ -18,7 +18,8 @@
     /* Path aliases */
     "paths": {
       "@marketplace/design-system": ["./src/index.ts"],
-      "@marketplace/design-system/*": ["./src/*"]
+      "@marketplace/design-system/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
 
     /* Linting */
