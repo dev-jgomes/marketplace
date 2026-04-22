@@ -24,6 +24,10 @@ export default defineConfig({
         find: /^@marketplace\/design-system\/(.*)/,
         replacement: path.resolve(dirname, "src/$1"),
       },
+      {
+        find: /^@\/(.*)/,
+        replacement: path.resolve(dirname, "src/$1"),
+      },
     ],
   },
   test: {

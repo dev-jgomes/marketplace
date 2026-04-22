@@ -1,5 +1,6 @@
 import { Button } from "@marketplace/design-system";
 import { Button as ShadcnButton } from "@/components/ui/button";
+import { ShadcnButton as AgnosticShadcnButton } from "@marketplace/design-system";
 
 export default function Home() {
   return (
@@ -26,6 +27,20 @@ export default function Home() {
           >
             Submit
           </ShadcnButton>
+        </div>
+
+        <div className="flex flex-col items-start gap-6 bg-gray-100 rounded-lg p-6">
+          <h2 className="text-2xl font-semibold leading-9 tracking-tight text-black dark:text-zinc-50">
+            This is a Shadcn Button from a Agnostic Library using Storybook.
+          </h2>
+
+          <AgnosticShadcnButton
+            aria-label="Submit"
+            variant="default"
+            size="default"
+          >
+            Submit
+          </AgnosticShadcnButton>
         </div>
       </main>
     </div>

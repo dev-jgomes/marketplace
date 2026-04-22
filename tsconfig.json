@@ -19,8 +19,11 @@
       }
     ],
     "paths": {
+      // Internal Root Aliases
       "@/*": ["./*"],
+      // Package Entry Point (For "Library" usage)
       "@marketplace/design-system": ["./packages/design-system/src/index.ts"],
+      // Internal Package Mapping (For deep imports)
       "@marketplace/design-system/*": ["./packages/design-system/src/*"]
     }
   },

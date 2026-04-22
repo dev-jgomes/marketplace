@@ -4,6 +4,7 @@ import type { Alias } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import tailwindcss from "@tailwindcss/postcss";
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -18,18 +19,24 @@ const configDir = path.dirname(fileURLToPath(import.meta.url));
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.{js,jsx,mjs,ts,tsx}"],
   addons: [
-    getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-vitest"),
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-docs"),
-    getAbsolutePath("@storybook/addon-onboarding"),
   ],
   framework: getAbsolutePath("@storybook/react-vite"),
-  async viteFinal(config, { configType }) {
+  core: {
+    disableTelemetry: true,
+  },
+  async viteFinal(config) {
     const baseAlias = (config.resolve?.alias ?? []) as Alias[];
 
     return {
       ...config,
+      css: {
+        postcss: {
+          plugins: [tailwindcss()],
+        },
+      },
       resolve: {
         ...(config.resolve ?? {}),
         alias: [
@@ -40,6 +47,10 @@ const config: StorybookConfig = {
           },
           {
             find: /^@marketplace\/design-system\/(.*)/,
+            replacement: path.resolve(configDir, "../src/$1"),
+          },
+          {
+            find: /^@\/(.*)/,
             replacement: path.resolve(configDir, "../src/$1"),
           },
         ],
