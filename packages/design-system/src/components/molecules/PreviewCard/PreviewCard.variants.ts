@@ -8,6 +8,12 @@ export const previewCardVariants = cva(
         stack: "bg-transparent p-4 hover:bg-card hover:shadow-xl",
         overlay: "aspect-square w-full p-0 hover:shadow-xl",
       },
+      aspect: {
+        square: "aspect-[var(--ratio-square)]",
+        video: "aspect-[var(--ratio-video)]",
+        portrait: "aspect-[var(--ratio-portrait)]",
+        auto: "aspect-auto",
+      },
     },
     defaultVariants: {
       layout: "stack",

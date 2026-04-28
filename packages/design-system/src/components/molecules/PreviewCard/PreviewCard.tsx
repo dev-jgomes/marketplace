@@ -21,6 +21,7 @@ export const PreviewCard = ({
   title,
   imageSrc,
   layout = "stack",
+  aspect,
   textSize,
   textWeight,
   className,
@@ -29,30 +30,32 @@ export const PreviewCard = ({
   const isOverlay = layout === "overlay";
 
   return (
-    <Card className={cn(previewCardVariants({ layout, className }))} {...props}>
+    <Card
+      className={cn(previewCardVariants({ layout, aspect, className }))}
+      {...props}
+    >
       <div
         className={cn(
-          "relative w-full h-full overflow-hidden",
-          !isOverlay && "aspect-square",
+          "relative w-full h-full overflow-hidden transition-all",
+          !isOverlay ? "rounded-lg" : "h-full w-full absolute inset-0",
         )}
       >
         <img
           src={imageSrc}
           alt={title}
           className={cn(
-            "w-full h-full object-cover transition-all",
+            "w-full h-full object-cover transition-all duration-500 group-hover:scale-105",
             isOverlay ? "rounded-none" : "rounded-lg",
           )}
         />
-        {isOverlay && <div className="absolute inset-0 bg-black/40" />}
+        {isOverlay && (
+          <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:opacity-60" />
+        )}
       </div>
-
       <div
         className={cn(
-          isOverlay
-            ? "absolute inset-0 flex items-end p-4"
-            : "mt-2 transition-all",
-          isOverlay ? "text-white" : "text-card-foreground",
+          "relative z-10", // Garante que o texto fique acima do overlay
+          isOverlay ? "mt-auto p-4 text-white" : "transition-all",
         )}
       >
         <span

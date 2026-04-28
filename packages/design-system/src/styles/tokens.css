@@ -50,6 +50,10 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-brand-main: var(--brand-main);
   --color-brand-foreground: var(--brand-foreground);
+
+  --ratio-square: 1 / 1;
+  --ratio-video: 16 / 9;
+  --ratio-portrait: 3 / 4;
 }
 
 :root {
@@ -95,6 +99,10 @@
   --sidebar-ring: oklch(0.708 0 0);
   --brand-main: #e90e8e; /* Your custom study token */
   --brand-foreground: #2bff00; /* Your custom study token */
+
+  --ratio-square: 1 / 1;
+  --ratio-video: 16 / 9;
+  --ratio-portrait: 3 / 4;
 }
 
 .dark {
