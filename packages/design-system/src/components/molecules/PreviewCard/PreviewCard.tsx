@@ -1,7 +1,7 @@
 import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
 import { cn } from "../../../lib/utils";
-import { Card } from "../Card/Card";
+import { Card, CardTitle } from "../Card/Card";
 import {
   previewCardVariants,
   previewTitleVariants,
@@ -58,13 +58,13 @@ export const PreviewCard = ({
           isOverlay ? "mt-auto p-4 text-white" : "transition-all",
         )}
       >
-        <span
+        <CardTitle
           className={cn(
             previewTitleVariants({ size: textSize, weight: textWeight }),
           )}
         >
           {title}
-        </span>
+        </CardTitle>
       </div>
     </Card>
   );

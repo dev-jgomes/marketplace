@@ -5,7 +5,7 @@ export default function StoreLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* TODO: Implement Navbar and Footer from storybook */}
-      <header className="border-b bg-surface-primary py-4 px-6 sticky top-0 z-50">
+      <header className="border-b bg-surface-primary py-4 px-6 top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-8">
           <span className="text-xl font-bold text-brand-main">MARKETPLACE</span>
           <nav className="space-x-4 text-sm font-medium">
