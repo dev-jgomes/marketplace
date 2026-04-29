@@ -1,26 +1,23 @@
 // Atoms
-export * from "./atoms/Button";
-export type * from "./atoms/Button";
-export * from "./atoms/ShadcnButton";
-export type * from "./atoms/ShadcnButton";
-export * from "./atoms/Badge";
-export type * from "./atoms/Badge";
-export * from "./atoms/Tooltip";
-export type * from "./atoms/Tooltip";
+export { CustomButton } from "./atoms/custom-button";
+export type { CustomButtonProps } from "./atoms/custom-button";
+
+export * from "./atoms/ui/button";
+export type * from "./atoms/ui/button";
+export * from "./atoms/ui/badge";
+export type * from "./atoms/ui/badge";
+export * from "./atoms/ui/tooltip";
+export type * from "./atoms/ui/tooltip";
 
 // Molecules
-export * from "./molecules/Header";
-export type * from "./molecules/Header";
 
-export * from "./molecules/Card";
-export type * from "./molecules/Card";
+export * from "./molecules/ui/card/Card";
+export type * from "./molecules/ui/card/Card";
 
-export * from "./molecules/PreviewCard";
-export type * from "./molecules/PreviewCard";
+export * from "./molecules/preview-card";
+export type * from "./molecules/preview-card";
 
-export * from "./molecules/ProductCard";
-export type * from "./molecules/ProductCard";
+// Organisms
 
-// Layouts
-export * from "./layouts/Page";
-export type * from "./layouts/Page";
+export * from "./organisms/product-card";
+export type * from "./organisms/product-card";

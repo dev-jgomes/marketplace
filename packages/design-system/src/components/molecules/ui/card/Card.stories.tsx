@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardAction,
 } from "./Card";
-import { ShadcnButton } from "../../atoms/ShadcnButton";
+import { Button } from "../../../atoms/ui/button";
 
 const meta: Meta<typeof Card> = {
   title: "Molecules/Card",
@@ -36,9 +36,9 @@ export const Default: Story = {
         <CardTitle>Marketplace Item</CardTitle>
         <CardDescription>Published 2 days ago in Electronics</CardDescription>
         <CardAction>
-          <ShadcnButton variant="ghost" size="sm">
+          <Button variant="ghost" size="sm">
             Submit
-          </ShadcnButton>
+          </Button>
         </CardAction>
       </CardHeader>
       <CardContent>
@@ -55,9 +55,9 @@ export const Default: Story = {
       <CardFooter>
         <div className="flex w-full items-center justify-between">
           <span className="font-bold text-lg">$299.00</span>
-          <ShadcnButton variant="ghost" size="sm">
+          <Button variant="ghost" size="sm">
             Submit
-          </ShadcnButton>
+          </Button>
         </div>
       </CardFooter>
     </Card>
@@ -82,9 +82,9 @@ export const Compact: Story = {
         </p>
       </CardContent>
       <CardFooter>
-        <ShadcnButton variant="ghost" size="sm">
+        <Button variant="ghost" size="sm">
           Submit
-        </ShadcnButton>
+        </Button>
       </CardFooter>
     </Card>
   ),

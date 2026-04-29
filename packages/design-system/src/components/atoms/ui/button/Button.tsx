@@ -2,21 +2,21 @@ import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
 import { Slot } from "radix-ui";
 
-import { cn } from "../../../lib/utils";
-import { buttonVariants } from "./ShadcnButton.variants";
+import { cn } from "../../../../lib/utils";
+import { buttonVariants } from "./Button.variants";
 
-export interface ShadcnButtonProps
+export interface ButtonProps
   extends React.ComponentProps<"button">, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-function ShadcnButton({
+function Button({
   className,
   variant = "default",
   size = "default",
   asChild = false,
   ...props
-}: ShadcnButtonProps) {
+}: ButtonProps) {
   const Comp = asChild ? Slot.Root : "button";
 
   return (
@@ -30,4 +30,4 @@ function ShadcnButton({
   );
 }
 
-export { ShadcnButton };
+export { Button };

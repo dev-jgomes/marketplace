@@ -1,5 +1,5 @@
 "use client";
-import { ProductCard, ShadcnButton } from "@marketplace/design-system";
+import { ProductCard, Button } from "@marketplace/design-system";
 import { cn } from "@marketplace/design-system/lib";
 import { Heart } from "lucide-react";
 
@@ -62,7 +62,7 @@ export const ProductGrid = ({
           {...product}
           // Inject the interactive button at the grid level
           action={
-            <ShadcnButton
+            <Button
               size="icon"
               variant="secondary"
               className="rounded-full shadow-xl inset-shadow-sm bg-white/80 backdrop-blur-md hover:bg-white hover:text-red-500"
@@ -72,7 +72,7 @@ export const ProductGrid = ({
               }}
             >
               <Heart className="h-4 w-4" />
-            </ShadcnButton>
+            </Button>
           }
         />
       ))}

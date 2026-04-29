@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./Tooltip";
-import { ShadcnButton } from "../ShadcnButton";
+import { Button } from "../button";
 
 const meta: Meta<typeof Tooltip> = {
-  title: "Atoms/Tooltip",
+  title: "Atoms/UI/Tooltip",
   component: Tooltip,
   tags: ["autodocs"],
   // We define the structure in a render function at the meta level
@@ -30,7 +30,7 @@ export const Default: Story = {
   render: (args) => (
     <Tooltip {...args}>
       <TooltipTrigger asChild>
-        <ShadcnButton variant="outline">Hover Me</ShadcnButton>
+        <Button variant="outline">Hover Me</Button>
       </TooltipTrigger>
       <TooltipContent>
         <span>Tooltip Content</span>
@@ -46,7 +46,7 @@ export const Bottom: Story = {
   render: (args) => (
     <Tooltip {...args}>
       <TooltipTrigger asChild>
-        <ShadcnButton variant="secondary">Bottom Placement</ShadcnButton>
+        <Button variant="secondary">Bottom Placement</Button>
       </TooltipTrigger>
       <TooltipContent side="bottom">
         <span>The tooltip is below the trigger</span>
