@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react-vite";
+import { TooltipProvider } from "../src/components/atoms/Tooltip";
 import "../src/styles/tokens.css";
 
 const preview: Preview = {
@@ -9,14 +10,17 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: "todo",
     },
   },
+  decorators: [
+    (Story) => (
+      <TooltipProvider>
+        <Story />
+      </TooltipProvider>
+    ),
+  ],
 };
 
 export default preview;
