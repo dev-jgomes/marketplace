@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Navbar } from "@/components/layout/Navbar";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -37,7 +38,13 @@ export default function RootLayout({
         manrope.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <footer className="border-t bg-gray-50 py-8 text-center text-sm text-gray-500">
+          © 2026 Marketplace Project. Built with Design System Library.
+        </footer>
+      </body>
     </html>
   );
 }
