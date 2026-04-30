@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react-vite";
-import { TooltipProvider } from "../src/components/atoms/Tooltip";
+import { TooltipProvider } from "../src/components/atoms/ui/tooltip";
 import "../src/styles/tokens.css";
 
 const preview: Preview = {

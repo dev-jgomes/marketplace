@@ -1,7 +1,7 @@
 import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
 import { cn } from "../../../lib/utils";
-import { Card, CardTitle } from "../Card/Card";
+import { Card, CardTitle } from "../ui/card/Card";
 import {
   previewCardVariants,
   previewTitleVariants,

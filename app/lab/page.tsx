@@ -1,6 +1,6 @@
-import { Button } from "@marketplace/design-system";
-import { Button as ShadcnButton } from "@/components/ui/button";
-import { ShadcnButton as AgnosticShadcnButton } from "@marketplace/design-system";
+import { CustomButton } from "@marketplace/design-system";
+import { Button } from "@/components/ui/button";
+import { Button as AgnosticButton } from "@marketplace/design-system";
 
 export default function LabPage() {
   return (
@@ -11,7 +11,7 @@ export default function LabPage() {
             This is a Button from a Agnostic Library using Storybook.
           </h1>
 
-          <Button primary label="Click me!" />
+          <CustomButton primary label="Click me!" />
         </div>
 
         <div className="flex flex-col items-start gap-6 bg-gray-100 rounded-lg p-6">
@@ -19,14 +19,14 @@ export default function LabPage() {
             This is a Button from Shadcn.
           </h2>
 
-          <ShadcnButton
+          <Button
             aria-label="Submit"
             variant="default"
             size="default"
             className="bg-brand-main"
           >
             Submit
-          </ShadcnButton>
+          </Button>
         </div>
 
         <div className="flex flex-col items-start gap-6 bg-gray-100 rounded-lg p-6">
@@ -34,13 +34,9 @@ export default function LabPage() {
             This is a Shadcn Button from a Agnostic Library using Storybook.
           </h2>
 
-          <AgnosticShadcnButton
-            aria-label="Submit"
-            variant="default"
-            size="default"
-          >
+          <AgnosticButton aria-label="Submit" variant="default" size="default">
             Submit
-          </AgnosticShadcnButton>
+          </AgnosticButton>
         </div>
       </main>
     </div>

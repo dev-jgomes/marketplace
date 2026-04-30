@@ -1,5 +1,5 @@
 import { CategoryGrid } from "@/components/store/CategoryGrid";
-import { Product, ProductGrid } from "../../components/store/ProductGrid";
+import { Product, ProductGrid } from "@/components/store/ProductGrid";
 
 const SPRING_COLLECTION = [
   {

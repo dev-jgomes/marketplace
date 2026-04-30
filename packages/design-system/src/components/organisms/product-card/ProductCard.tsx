@@ -7,16 +7,16 @@ import {
   CardDescription,
   CardContent,
   CardAction,
-} from "../Card/Card";
+} from "../../molecules/ui/card/Card";
 import { cn } from "../../../lib/utils";
 import { Star } from "lucide-react";
-import { Badge } from "../../atoms/Badge";
+import { Badge } from "../../atoms/ui/badge";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../../atoms/Tooltip";
+} from "../../atoms/ui/tooltip";
 
 export interface ProductTag {
   label: string;

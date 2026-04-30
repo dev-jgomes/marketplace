@@ -3,7 +3,7 @@ import { Badge } from "./Badge";
 import { Zap } from "lucide-react";
 
 const meta: Meta<typeof Badge> = {
-  title: "Atoms/Badge",
+  title: "Atoms/UI/Badge",
   component: Badge,
   tags: ["autodocs"],
   parameters: {

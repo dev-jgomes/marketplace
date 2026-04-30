@@ -1,26 +1,26 @@
-import "./Button.css";
+import "./CustomButton.css";
 
-export interface ButtonProps {
+export interface CustomButtonProps {
   /** Is this the principal call to action on the page? */
   primary?: boolean;
   /** What background color to use */
   backgroundColor?: string;
   /** How large should the button be? */
   size?: "small" | "medium" | "large";
-  /** Button contents */
+  /** CustomButton contents */
   label: string;
   /** Optional click handler */
   onClick?: () => void;
 }
 
 /** Primary UI component for user interaction */
-export const Button = ({
+export const CustomButton = ({
   primary = false,
   size = "medium",
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: CustomButtonProps) => {
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";

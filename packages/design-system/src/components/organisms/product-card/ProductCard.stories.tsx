@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ProductCard } from "./index";
 import { Heart } from "lucide-react";
-import { ShadcnButton } from "../../atoms/ShadcnButton";
+import { Button } from "../../atoms/ui/button";
 
 const meta: Meta<typeof ProductCard> = {
-  title: "Molecules/ProductCard",
+  title: "Organisms/ProductCard",
   component: ProductCard,
   tags: ["autodocs"],
   parameters: {
@@ -42,14 +42,14 @@ export const Default: Story = {
   },
   render: (args) => {
     const actionElement = args.action ? (
-      <ShadcnButton
+      <Button
         size="icon"
         variant="secondary"
         className="rounded-full shadow-lg hover:text-red-500"
         onClick={(e) => e.preventDefault()}
       >
         <Heart className="h-4 w-4" />
-      </ShadcnButton>
+      </Button>
     ) : undefined;
 
     return (
