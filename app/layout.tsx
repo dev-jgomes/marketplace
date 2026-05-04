@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "../packages/design-system/src/components";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -38,12 +39,72 @@ export default function RootLayout({
         manrope.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full w-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <footer className="border-t bg-gray-50 py-8 text-center text-sm text-gray-500">
-          © 2026 Marketplace Project. Built with Design System Library.
-        </footer>
+        <Footer
+          className="bg-gray-100"
+          copyText="© 2026 Marketplace Project. Built for scale."
+          logo={
+            <div className="text-xl font-black tracking-tighter text-brand-main">
+              MARKETPLACE
+            </div>
+          }
+          sections={[
+            {
+              links: [
+                {
+                  href: "#",
+                  label: "All Categories",
+                },
+                {
+                  href: "#",
+                  label: "Featured Stores",
+                },
+                {
+                  href: "#",
+                  label: "Sell on Marketplace",
+                },
+              ],
+              title: "Marketplace",
+            },
+            {
+              links: [
+                {
+                  href: "#",
+                  label: "My Profile",
+                },
+                {
+                  href: "#",
+                  label: "Order History",
+                },
+                {
+                  href: "#",
+                  label: "Settings",
+                },
+              ],
+              title: "Account",
+            },
+            {
+              links: [
+                {
+                  href: "#",
+                  label: "Help Center",
+                },
+                {
+                  href: "#",
+                  label: "Community",
+                },
+                {
+                  href: "#",
+                  label: "Contact Us",
+                },
+              ],
+              title: "Support",
+            },
+          ]}
+          variant="default"
+        />
       </body>
     </html>
   );

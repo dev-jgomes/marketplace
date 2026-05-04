@@ -23,6 +23,11 @@ export function Navbar() {
   };
   return (
     <AgnosticNavbar
+      logo={
+        <span className="font-bold text-xl uppercase tracking-tight text-brand-main">
+          Marketplace
+        </span>
+      }
       LinkComponent={Link}
       placeholder="Search marketplace..."
       navLinks={[

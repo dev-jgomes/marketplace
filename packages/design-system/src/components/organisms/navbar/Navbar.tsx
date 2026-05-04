@@ -10,6 +10,7 @@ import {
   CommandItem,
   CommandInput,
 } from "../../molecules/ui/command";
+import { Separator } from "../../atoms/ui/separator";
 
 export interface SearchResult {
   id: string;
@@ -136,9 +137,11 @@ export function Navbar({
         </div>
       </div>
 
+      <Separator />
+
       {/* SECONDARY ROW */}
       {navLinks.length > 0 && (
-        <div className="border-t">
+        <div>
           <div className="container mx-auto flex h-11 items-center justify-center px-4">
             <nav>
               <ul className="flex items-center gap-8 text-sm font-medium text-muted-foreground">

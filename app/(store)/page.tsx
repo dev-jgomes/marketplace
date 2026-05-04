@@ -216,7 +216,7 @@ export default function StorePage() {
       </section>
 
       {/* Summer Section - Premium Overlay Grid */}
-      <section className="bg-gray-100 py-12 rounded-xs">
+      <section className="bg-gray-100 py-12 rounded-lg">
         <div className="container mx-auto">
           <div className="px-4 mb-8">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">

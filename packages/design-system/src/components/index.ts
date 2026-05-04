@@ -13,6 +13,8 @@ export * from "./atoms/ui/input";
 export type * from "./atoms/ui/input";
 export * from "./atoms/ui/textarea";
 export type * from "./atoms/ui/textarea";
+export * from "./atoms/ui/separator";
+export type * from "./atoms/ui/separator";
 
 // Molecules
 //ui
@@ -36,3 +38,5 @@ export * from "./organisms/product-card";
 export type * from "./organisms/product-card";
 export * from "./organisms/navbar";
 export type * from "./organisms/navbar";
+export * from "./organisms/footer";
+export type * from "./organisms/footer";
