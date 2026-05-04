@@ -11,7 +11,7 @@ import {
 import { Button } from "../../../atoms/ui/button";
 
 const meta: Meta<typeof Card> = {
-  title: "Molecules/Card",
+  title: "Molecules/UI/Card",
   component: Card,
   tags: ["autodocs"],
   argTypes: {
