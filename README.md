@@ -26,7 +26,3 @@ The monorepo manages two distinct Vercel deployments:
 - **Primitives:** Radix UI (Headless)
 - **Icons:** Lucide React
 - **Utilities:** `clsx`, `tailwind-merge`
-
-## 📜 Development Rules
-
-All contributors must adhere to the **Dependency Shadow Rule** and the **Parallel Path** architecture defined in the design system package. Use the root `.cursorrules` to ensure AI-assisted development remains compliant with these standards.
