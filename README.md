@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marketplace Monorepo
 
-## Getting Started
+A high-performance monorepo architecture separating the application orchestration layer from a framework-agnostic design system.
 
-First, run the development server:
+> **Observation:** This project structure is the result of an intensive **Migration Study**. All core components have been transitioned from the Next.js "Lab" environment into the standardized `@marketplace/design-system` library to ensure framework agnosticism and long-term reusability.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🏗 System Architecture
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The repository is divided into two primary environments:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Web App (`apps/web`):** Built with **Next.js 15+**. Handles server-side logic, data fetching, authentication (Clerk), and marketplace business orchestration.
+2.  **Design System (`packages/design-system`):** Built with **React 19**, **Storybook**, and **Tailwind CSS v4**. A self-contained UI library that serves as the visual source of truth.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Deployment Strategy
 
-## Learn More
+The monorepo manages two distinct Vercel deployments:
 
-To learn more about Next.js, take a look at the following resources:
+- **Production Web**
+- **Design System/Docs**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js (App Router)
+- **UI Library:** React 19 / Storybook 10
+- **Styling:** Tailwind CSS v4 (CSS-Variable-First)
+- **Primitives:** Radix UI (Headless)
+- **Icons:** Lucide React
+- **Utilities:** `clsx`, `tailwind-merge`
 
-## Deploy on Vercel
+## 📜 Development Rules
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All contributors must adhere to the **Dependency Shadow Rule** and the **Parallel Path** architecture defined in the design system package. Use the root `.cursorrules` to ensure AI-assisted development remains compliant with these standards.
